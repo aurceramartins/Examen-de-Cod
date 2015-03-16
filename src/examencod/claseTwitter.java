@@ -1,3 +1,4 @@
+
 package examencod;
 import java.util.List;
 import twitter4j.Query;
@@ -8,7 +9,11 @@ import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 public class claseTwitter {
-
+/**
+ *
+ * @author Alex Urcera
+ * version: 1.0
+ */
     Twitter mitwitter;
 
     public claseTwitter() {
