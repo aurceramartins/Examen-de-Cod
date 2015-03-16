@@ -1,5 +1,8 @@
 package examencod;
+import java.util.List;
+import twitter4j.Status;
 import twitter4j.Twitter;
+import twitter4j.TwitterException;
 import twitter4j.TwitterFactory;
 import twitter4j.conf.ConfigurationBuilder;
 public class claseTwitter {
@@ -16,6 +19,13 @@ public class claseTwitter {
                 .setOAuthAccessTokenSecret("JsDAHOzJOk0YPlXQn56WOM6zpzei2nKvd4m1VerbVT2Gf");
         TwitterFactory tf = new TwitterFactory(cb.build());
         mitwitter = tf.getInstance();
+    }
+    public void gettingTimeLine() throws TwitterException {
+        List<Status> statuses = mitwitter.getHomeTimeline();
+        System.out.println("Showing home timeline.");
+        for (Status status : statuses) {
+            System.out.println(status.getUser().getName() + ":" + status.getText());
+        }
     }
 
 }
