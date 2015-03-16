@@ -36,6 +36,11 @@ public class claseTwitter {
             System.out.println("@" + status.getUser().getScreenName() + ":" + status.getText());
         }
     }
+    public void hacerUnTweet(String busqueda) throws TwitterException {
+
+        Status status = mitwitter.updateStatus(busqueda);
+        System.out.println("Successfully updated the status to [" + status.getText() + "].");
+    }
     
 
 }
